@@ -15,7 +15,7 @@ app.use(methodOverride('_method'));
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(DB_URL)
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
